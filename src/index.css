@@ -13,7 +13,7 @@ body {
 }
 
 .navbar-logo {
-  width: 96px; /* Ajusta según sea necesario */
+  width: 96px;
 }
 
 .navbar-links {
@@ -23,7 +23,7 @@ body {
 
 .navbar-separator {
   border-left: 2px solid white;
-  height: 24px; /* Ajusta según sea necesario */
+  height: 24px;
 }
 
 .navbar-link {
@@ -35,17 +35,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem; /* Incrementar el padding para más espacio */
-  background-color: #c8102e; /* Color rojo del fondo */
+  padding: 2rem;
+  background-color: #c8102e;
   color: white;
 }
 
 .footer-logo {
   width: 64px;
   height: 64px;
-  border-radius: 50%; /* Hacer la imagen circular */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agregar relieve */
-  object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
 }
 
 .footer-left {
@@ -60,14 +60,14 @@ body {
 
 .footer-left-button {
   margin-top: 1rem;
-  border-radius: 25px; /* Más redondeado */
-  padding: 0.5rem 1.5rem; /* Ajustar padding */
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
 }
 
 .footer-separator {
   border-left: 2px solid white;
   height: 80px;
-  margin: 0 2rem; /* Reducir el espacio alrededor de la línea */
+  margin: 0 2rem;
 }
 
 .footer-right {
@@ -75,20 +75,20 @@ body {
 }
 
 .footer-right p {
-  font-size: 0.875rem; /* Reducir el tamaño de las letras */
-  margin-bottom: 1rem; /* Espacio debajo del texto */
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
 }
 
 .footer-right-icons {
   display: flex;
-  flex-wrap: wrap; /* Permite que los iconos se dispongan en varias filas */
-  gap: 0.5rem; /* Ajusta el espacio entre los iconos */
+  flex-wrap: wrap;
+  gap: 0.5rem;
   justify-content: center;
 }
 
 .footer-right-icons a {
   color: white;
-  font-size: 32px; /* Ajusta el tamaño de los iconos */
+  font-size: 32px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -137,7 +137,6 @@ body {
   @apply text-white text-2xl;
 }
 
-/* Estilos adicionales para pantallas pequeñas */
 @media (max-width: 768px) {
   .footer {
     @apply flex-col items-center;
@@ -206,18 +205,17 @@ input[type="text"]::placeholder {
 
 .carousel .slide img {
   width: 100%;
-  height: 400px; /* Define una altura fija */
-  object-fit: cover; /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+  height: 400px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
-/* Sobrescribir estilos de las flechas del carrusel para quitar la sombra y centrar */
 .carousel .control-arrow,
 .carousel .control-next,
 .carousel .control-prev {
   background: none !important;
   box-shadow: none !important;
-  color: #fff !important; /* Color blanco para las flechas */
+  color: #fff !important;
   width: 30px;
   height: 30px;
   top: 50%;
@@ -229,11 +227,11 @@ input[type="text"]::placeholder {
 }
 
 .carousel .control-prev {
-  left: 10px; /* Ajusta la posición izquierda */
+  left: 10px;
 }
 
 .carousel .control-next {
-  right: 10px; /* Ajusta la posición derecha */
+  right: 10px;
 }
 
 .carousel .control-arrow:hover {
@@ -263,7 +261,6 @@ input[type="text"]::placeholder {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para el componente ProductDetails */
 .product-details-container {
   padding: 1rem;
   background-color: #f7fafc;
@@ -316,4 +313,39 @@ input[type="text"]::placeholder {
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+}
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f7fafc;
+  text-align: center;
+}
+
+.not-found-title {
+  font-size: 6rem;
+  color: #c8102e;
+  margin-bottom: 1rem;
+}
+
+.not-found-message {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.not-found-button {
+  background-color: #c8102e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.not-found-button:hover {
+  background-color: #a60c25;
 }
