@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ProductCard = ({ product }) => {
   return (
     <div className="flex items-center justify-between p-4 bg-white rounded-lg shadow-md">
@@ -8,9 +10,11 @@ const ProductCard = ({ product }) => {
       />
       <div className="ml-4 flex-grow">
         <h3 className="text-lg font-semibold">{product.name}</h3>
-        <button className="bg-red-600 text-white px-4 py-2 rounded mt-2">
-          Información
-        </button>
+        <Link to={`/productos/${product.id}`}>
+          <button className="bg-red-600 text-white px-4 py-2 rounded mt-2">
+            Información
+          </button>
+        </Link>
       </div>
       <div className="text-lg font-semibold text-right">
         {product.price.toFixed(2)}$

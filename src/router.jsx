@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import LayoutPublic from "./layout/LayoutPublic";
 import LandingPage from "./pages/LandingPage";
 import ProductsPage from "./pages/ProductsPage";
+import ProductDetails from "./pages/ProductDetails.jsx";
 //import NotFound from "./pages/NotFound"; // Agrega un componente de error si aún no existe
 
 export const Router = createBrowserRouter([
@@ -17,6 +18,10 @@ export const Router = createBrowserRouter([
       {
         path: "/productos",
         element: <ProductsPage />,
+      },
+      {
+        path: "productos/:id",
+        element: <ProductDetails />, // Añadir la ruta para los detalles del producto
       },
     ],
   },
