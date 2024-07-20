@@ -98,6 +98,7 @@ body {
 
 .footer {
   @apply flex flex-col md:flex-row justify-between items-center py-6 px-8 bg-red-600 text-white;
+  width: 100%;
 }
 
 .footer-logo {
@@ -157,6 +158,25 @@ body {
   .footer-right-icons {
     @apply justify-center gap-4;
   }
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+input[type="text"]::placeholder {
+  color: #888;
+  font-style: italic;
 }
 
 .carousel .slide img {

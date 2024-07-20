@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import LayoutPublic from "./layout/LayoutPublic";
 import LandingPage from "./pages/LandingPage";
+import ProductsPage from "./pages/ProductsPage";
 //import NotFound from "./pages/NotFound"; // Agrega un componente de error si aún no existe
 
 export const Router = createBrowserRouter([
@@ -13,7 +14,10 @@ export const Router = createBrowserRouter([
         index: true,
         element: <LandingPage />,
       },
-      // Otras rutas pueden ir aquí en el futuro
+      {
+        path: "/productos",
+        element: <ProductsPage />,
+      },
     ],
   },
 ]);
