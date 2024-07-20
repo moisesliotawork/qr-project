@@ -14,11 +14,9 @@ const Footer = () => {
       <div className="footer-left">
         <img src={venupLogo} alt="VenUp Logo" className="footer-logo" />
         <div className="footer-left-text">
-          <p>¿Te gusto esta página?</p>
+          <p>¿Te gustó esta página?</p>
           <p>Nosotros te hacemos la tuya</p>
-          <button className="bg-white text-red-600 px-4 py-2 rounded-full footer-left-button">
-            Venup
-          </button>
+          <button className="footer-left-button">VenUp</button>
         </div>
       </div>
       <div className="footer-separator"></div>
