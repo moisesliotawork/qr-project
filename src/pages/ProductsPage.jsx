@@ -40,8 +40,8 @@ const ProductsPage = () => {
     );
 
     if (filtered.length === 0) {
-      setShowNoProductsModal(true); // Mostrar NoProductsModal si no hay productos
-      setFilteredProducts(products); // Mostrar todos los productos
+      setShowNoProductsModal(true);
+      setFilteredProducts(products);
     } else {
       setFilteredProducts(filtered);
     }

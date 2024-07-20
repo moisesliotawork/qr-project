@@ -1,16 +1,14 @@
 import { useLocation } from "react-router-dom";
-import {
-  FaInstagram,
-  FaFacebook,
-  FaLinkedin,
-  FaWhatsapp,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaWhatsapp, FaTwitter } from "react-icons/fa";
 import { BsTiktok } from "react-icons/bs";
-import venupLogo from "/venUp.png"; // Asegúrate de actualizar la ruta al logo de VenUp
+import venupLogo from "/venUp.png";
 
 const Footer = () => {
   const location = useLocation();
+
+  const handleVenUpClick = () => {
+    window.location.href = "https://w.app/p9sNdP";
+  };
 
   if (location.pathname.includes("/productos")) {
     return (
@@ -30,30 +28,38 @@ const Footer = () => {
         <div className="footer-left-text">
           <p>¿Te gustó esta página?</p>
           <p>Nosotros te hacemos la tuya</p>
-          <button className="footer-left-button">VenUp</button>
+          <button className="footer-left-button" onClick={handleVenUpClick}>
+            VenUp
+          </button>
         </div>
       </div>
       <div className="footer-separator"></div>
       <div className="footer-right">
         <p>Redes Sociales - KFC</p>
         <div className="footer-right-icons">
-          <a href="#" className="text-white">
+          <a
+            href="https://www.instagram.com/kfcvzla/?hl=es"
+            className="text-white"
+          >
             <FaInstagram />
           </a>
           <a href="#" className="text-white">
             <FaWhatsapp />
           </a>
-          <a href="#" className="text-white">
+          <a
+            href="https://www.tiktok.com/@kfc_vzla_oficial"
+            className="text-white"
+          >
             <BsTiktok />
           </a>
-          <a href="#" className="text-white">
+          <a href="https://x.com/KFC_VZLA" className="text-white">
             <FaTwitter />
           </a>
-          <a href="#" className="text-white">
+          <a
+            href="https://www.facebook.com/KFCVzla/?locale=es_LA"
+            className="text-white"
+          >
             <FaFacebook />
-          </a>
-          <a href="#" className="text-white">
-            <FaLinkedin />
           </a>
         </div>
       </div>
