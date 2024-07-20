@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getAllProducts } from "../controllers/product";
 import ProductList from "../components/ProductList";
 import FilterModal from "../components/FilterModal";
-import NoProductsModal from "../components/NoProductsModal"; // Importar NoProductsModal
+import NoProductsModal from "../components/NoProductsModal";
 import SearchBar from "../components/SearchBar";
 
 const ProductsPage = () => {
@@ -10,7 +10,7 @@ const ProductsPage = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [showFilterModal, setShowFilterModal] = useState(false);
-  const [showNoProductsModal, setShowNoProductsModal] = useState(false); // Estado para controlar NoProductsModal
+  const [showNoProductsModal, setShowNoProductsModal] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -61,8 +61,8 @@ const ProductsPage = () => {
   }, [search, products]);
 
   return (
-    <div>
-      <div className="p-4 bg-gray-100">
+    <div className="min-h-screen flex flex-col">
+      <div className="p-4 bg-gray-100 flex-grow">
         <SearchBar
           search={search}
           setSearch={setSearch}
