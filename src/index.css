@@ -6,6 +6,96 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 96px; /* Ajusta según sea necesario */
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-separator {
+  border-left: 2px solid white;
+  height: 24px; /* Ajusta según sea necesario */
+}
+
+.navbar-link {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem; /* Incrementar el padding para más espacio */
+  background-color: #c8102e; /* Color rojo del fondo */
+  color: white;
+}
+
+.footer-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%; /* Hacer la imagen circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agregar relieve */
+  object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-left-text {
+  text-align: center;
+}
+
+.footer-left-button {
+  margin-top: 1rem;
+  border-radius: 25px; /* Más redondeado */
+  padding: 0.5rem 1.5rem; /* Ajustar padding */
+}
+
+.footer-separator {
+  border-left: 2px solid white;
+  height: 80px;
+  margin: 0 2rem; /* Reducir el espacio alrededor de la línea */
+}
+
+.footer-right {
+  text-align: center;
+}
+
+.footer-right p {
+  font-size: 0.875rem; /* Reducir el tamaño de las letras */
+  margin-bottom: 1rem; /* Espacio debajo del texto */
+}
+
+.footer-right-icons {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los iconos se dispongan en varias filas */
+  gap: 0.5rem; /* Ajusta el espacio entre los iconos */
+  justify-content: center;
+}
+
+.footer-right-icons a {
+  color: white;
+  font-size: 32px; /* Ajusta el tamaño de los iconos */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .carousel .slide img {
   width: 100%;
   height: 400px; /* Define una altura fija */
