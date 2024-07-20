@@ -7,7 +7,6 @@ const FilterModal = ({ show, onClose, onApply }) => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    // Limpiar el mensaje de error cuando el usuario escribe en los campos
     setError("");
   }, [minPrice, maxPrice, filterType]);
 

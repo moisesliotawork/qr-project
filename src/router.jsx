@@ -21,7 +21,7 @@ export const Router = createBrowserRouter([
       },
       {
         path: "productos/:id",
-        element: <ProductDetails />, // Añadir la ruta para los detalles del producto
+        element: <ProductDetails />,
       },
     ],
   },
