@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import {
   FaInstagram,
   FaFacebook,
@@ -9,6 +10,17 @@ import { BsTiktok } from "react-icons/bs";
 import venupLogo from "/venUp.png"; // Asegúrate de actualizar la ruta al logo de VenUp
 
 const Footer = () => {
+  const location = useLocation();
+
+  if (location.pathname === "/productos") {
+    return (
+      <footer className="footer">
+        <img src={venupLogo} alt="VenUp Logo" className="footer-logo mb-2" />
+        <p className="text-center">Derechos Reservados</p>
+      </footer>
+    );
+  }
+
   return (
     <footer className="footer">
       <div className="footer-left">
