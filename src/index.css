@@ -96,6 +96,69 @@ body {
   justify-content: center;
 }
 
+.footer {
+  @apply flex flex-col md:flex-row justify-between items-center py-6 px-8 bg-red-600 text-white;
+}
+
+.footer-logo {
+  @apply w-16 h-16 rounded-full shadow-lg object-cover;
+}
+
+.footer-left {
+  @apply flex flex-col md:flex-row items-center md:items-start text-center md:text-left space-y-4 md:space-y-0;
+}
+
+.footer-left-text {
+  @apply md:ml-4;
+}
+
+.footer-left-button {
+  @apply bg-white text-red-600 px-4 py-2 rounded-full;
+}
+
+.footer-separator {
+  @apply hidden md:block border-l-2 border-white h-20 mx-6;
+}
+
+.footer-right {
+  @apply flex flex-col items-center md:items-end text-center md:text-right;
+}
+
+.footer-right p {
+  @apply text-sm mb-2;
+}
+
+.footer-right-icons {
+  @apply flex justify-center md:justify-end gap-2;
+}
+
+.footer-right-icons a {
+  @apply text-white text-2xl;
+}
+
+/* Estilos adicionales para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer {
+    @apply flex-col items-center;
+  }
+
+  .footer-left {
+    @apply flex-col items-center text-center;
+  }
+
+  .footer-right {
+    @apply flex-col items-center text-center;
+  }
+
+  .footer-separator {
+    @apply hidden;
+  }
+
+  .footer-right-icons {
+    @apply justify-center gap-4;
+  }
+}
+
 .carousel .slide img {
   width: 100%;
   height: 400px; /* Define una altura fija */
