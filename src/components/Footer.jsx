@@ -12,11 +12,15 @@ import venupLogo from "/venUp.png"; // Asegúrate de actualizar la ruta al logo 
 const Footer = () => {
   const location = useLocation();
 
-  if (location.pathname === "/productos") {
+  if (location.pathname.includes("/productos")) {
     return (
-      <footer className="footer">
-        <img src={venupLogo} alt="VenUp Logo" className="footer-logo mb-2" />
-        <p className="text-center">Derechos Reservados</p>
+      <footer className="footer-products">
+        <img
+          src={venupLogo}
+          alt="VenUp Logo"
+          className="footer-logo-products mb-2"
+        />
+        <p className="text-center footer-text-products">Derechos Reservados</p>
       </footer>
     );
   }
