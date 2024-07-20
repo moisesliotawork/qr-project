@@ -20,16 +20,6 @@ const Team = () => {
       position: "VP, Human Resources",
       image: "/image4.jpg",
     },
-    {
-      name: "Emma Dorsey",
-      position: "Senior Developer",
-      image: "/image5.jpg",
-    },
-    {
-      name: "Alicia Bell",
-      position: "Junior Copywriter",
-      image: "/image6.jpg",
-    },
   ];
 
   return (
