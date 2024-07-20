@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const FilterModal = ({ show, onClose, onApply }) => {
   const [filterType, setFilterType] = useState("");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    // Limpiar el mensaje de error cuando el usuario escribe en los campos
+    setError("");
+  }, [minPrice, maxPrice, filterType]);
 
   const handleApply = () => {
     const min = minPrice === "" ? 0 : parseFloat(minPrice);
@@ -22,6 +27,24 @@ const FilterModal = ({ show, onClose, onApply }) => {
 
     onApply({ filterType, minPrice: min, maxPrice: max });
     onClose();
+  };
+
+  const handleMinPriceChange = (e) => {
+    const value = e.target.value;
+    if (value === "" || !isNaN(value)) {
+      setMinPrice(value);
+    } else {
+      setError("Por favor, ingrese valores numéricos válidos.");
+    }
+  };
+
+  const handleMaxPriceChange = (e) => {
+    const value = e.target.value;
+    if (value === "" || !isNaN(value)) {
+      setMaxPrice(value);
+    } else {
+      setError("Por favor, ingrese valores numéricos válidos.");
+    }
   };
 
   if (!show) return null;
@@ -56,14 +79,14 @@ const FilterModal = ({ show, onClose, onApply }) => {
             type="text"
             placeholder="Precio mínimo"
             value={minPrice}
-            onChange={(e) => setMinPrice(e.target.value)}
+            onChange={handleMinPriceChange}
             className="w-full mb-2 p-2 border border-gray-300 rounded"
           />
           <input
             type="text"
             placeholder="Precio máximo"
             value={maxPrice}
-            onChange={(e) => setMaxPrice(e.target.value)}
+            onChange={handleMaxPriceChange}
             className="w-full p-2 border border-gray-300 rounded"
           />
         </div>
