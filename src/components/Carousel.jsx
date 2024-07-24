@@ -12,7 +12,7 @@ const ImageCarousel = () => {
       dynamicHeight={true}
     >
       <div>
-        <img src="/KFC1.jpg" alt="Imagen 1" />
+        <img src="/KFC1.png" alt="Imagen 1" />
       </div>
       <div>
         <img src="/KFC2.jpg" alt="Imagen 2" />
@@ -24,7 +24,7 @@ const ImageCarousel = () => {
         <img src="/KFC4.jpg" alt="Imagen 4" />
       </div>
       <div>
-        <img src="/KFC5.jpg" alt="Imagen 5" />
+        <img src="/KFC5.jpeg" alt="Imagen 5" />
       </div>
     </Carousel>
   );
